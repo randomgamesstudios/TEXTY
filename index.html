@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Texty Notepad</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>📝 Texty Notepad</h1>
+
+
+
+  <!-- Dark Mode Toggle -->
+  <label class="toggle">
+    <input type="checkbox" id="darkModeToggle" />
+    <span>🌙 Dark Mode</span>
+  </label>
+
+  <!-- File Upload -->
+  <input type="file" id="fileInput" accept=".txt,.texty" />
+
+  <div id="dropZone" class="drop-zone">
+    <p>Drag and drop a .txt or .texty file here</p>
+  </div>
+  
+  <!-- Text Editor -->
+  <textarea id="notepad" placeholder="Start typing..." spellcheck="true"></textarea>
+
+  
+  <!-- Controls -->
+  <div class="controls">
+    <input type="text" id="filename" placeholder="Filename" />
+    <select id="filetype">
+      <option value="txt">.txt</option>
+      <option value="texty">.texty</option>
+    </select>
+    <button id="saveBtn">💾 Save</button>
+  </div>
+
+  <!-- Markdown Preview -->
+  <div id="previewContainer">
+    <h3>🔍 Markdown Preview</h3>
+    <div id="markdownPreview"></div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
